@@ -53,3 +53,16 @@ As benchmark model I plan to use a simpler ResNet18 model.
 ## Evaluation Metrics
 
 I will use accuracy, which is the ratio of the number of correct predictions to the total number of predictions made, as main evaluation metric.
+
+## Project Design
+
+1. Prepare the data and split it into the training, validation and testing set
+2. Upload to S3 so that I can make it available to SageMaker training jobs.
+3. Write the scripts which will be passed to SageMaker. 
+   * Define the model (which will be a `torchvision.models.resnet50(pretrained=True)`) 
+   * Define the data loaders which perform resizing, augmentation and normalization
+   * Define the training loop 
+   * Define the testing loop
+4. Submit a SageMaker training job
+5. Evaluate the results
+   
