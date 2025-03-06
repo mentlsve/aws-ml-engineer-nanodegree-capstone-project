@@ -31,6 +31,9 @@ def net():
     TODO: Complete this function that initializes your model
           Remember to use a pretrained model
     '''
+
+    model.
+
     pass
 
 def create_data_loaders(data, batch_size):
